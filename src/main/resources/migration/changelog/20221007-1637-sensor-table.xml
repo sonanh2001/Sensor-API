@@ -1,0 +1,18 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+  <changeSet author="Son Anh" id="20221007-1637-sensor-table">
+    <createTable tableName="sensor">
+      <column name="sensor_id" type="varchar(255)">
+        <constraints primaryKey="true"/>
+      </column>
+      <column name="temperature" type="float"/>
+      <column name="humidity" type="float"/>
+      <column name="created_at" type="bigint"/>
+    </createTable>
+  </changeSet>
+
+</databaseChangeLog>
