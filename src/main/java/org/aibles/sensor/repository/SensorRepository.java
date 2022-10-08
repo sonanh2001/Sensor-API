@@ -8,9 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface SensorRepository extends JpaRepository<Sensor, Long> {
-  @Query("select count(s) from Sensor s")
-  Long countAll();
-
   @Query(
       nativeQuery = true,
       value = "select * from sensor s order by s.created_at desc fetch first 1 row only")
